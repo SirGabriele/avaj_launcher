@@ -1,4 +1,4 @@
-package fr.kbrousse.avaj_launcher.Aircraft;
+package fr.kbrousse.avaj_launcher.aircraft;
 
 public class Helicopter extends Aircraft {
     /**

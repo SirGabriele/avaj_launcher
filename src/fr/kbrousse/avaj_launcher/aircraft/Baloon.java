@@ -1,15 +1,14 @@
-package fr.kbrousse.avaj_launcher.Aircraft;
+package fr.kbrousse.avaj_launcher.aircraft;
 
-public class JetPlane extends Aircraft {
+public class Baloon extends Aircraft {
     /**
      * Constructor
      * @param p_id          Id
      * @param p_name        Name
      * @param p_coordinates Coordinates
      */
-    protected JetPlane(long p_id, String p_name, Coordinates p_coordinates) {
+    public Baloon(long p_id, String p_name, Coordinates p_coordinates) {
         super(p_id, p_name, p_coordinates);
-        System.out.println("Constructor JetPlane");
     }
 
     /**

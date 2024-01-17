@@ -1,9 +1,0 @@
-src/fr/kbrousse/avaj_launcher/Tower/Tower.java
-src/fr/kbrousse/avaj_launcher/Main/Main.java
-src/fr/kbrousse/avaj_launcher/Flyable/Flyable.java
-src/fr/kbrousse/avaj_launcher/Aircraft/Helicopter.java
-src/fr/kbrousse/avaj_launcher/Aircraft/Baloon.java
-src/fr/kbrousse/avaj_launcher/Aircraft/JetPlane.java
-src/fr/kbrousse/avaj_launcher/Aircraft/Coordinates.java
-src/fr/kbrousse/avaj_launcher/Aircraft/Aircraft.java
-src/fr/kbrousse/avaj_launcher/WeatherTower/WeatherTower.java

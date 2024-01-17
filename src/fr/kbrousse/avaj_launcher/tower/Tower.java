@@ -1,6 +1,6 @@
-package fr.kbrousse.avaj_launcher.Tower;
+package fr.kbrousse.avaj_launcher.tower;
 
-import fr.kbrousse.avaj_launcher.Flyable.Flyable;
+import fr.kbrousse.avaj_launcher.flyable.Flyable;
 import java.util.ArrayList;
 import java.util.List;
 

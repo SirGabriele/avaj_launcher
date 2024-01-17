@@ -1,4 +1,4 @@
-package fr.kbrousse.avaj_launcher.Aircraft;
+package fr.kbrousse.avaj_launcher.aircraft;
 
 public class Coordinates {
     /**
@@ -23,7 +23,6 @@ public class Coordinates {
      * @param p_height      Height coordinate
      */
     Coordinates(int p_longitude, int p_latitude, int p_height) {
-        System.out.println("Constructor Coordinates");
         this._longitude = p_longitude;
         this._latitude = p_latitude;
         this._height = p_height;

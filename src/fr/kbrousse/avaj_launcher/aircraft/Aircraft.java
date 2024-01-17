@@ -1,6 +1,6 @@
-package fr.kbrousse.avaj_launcher.Aircraft;
+package fr.kbrousse.avaj_launcher.aircraft;
 
-import fr.kbrousse.avaj_launcher.Flyable.Flyable;
+import fr.kbrousse.avaj_launcher.flyable.Flyable;
 
 public class Aircraft extends Flyable {
     /**
@@ -24,9 +24,7 @@ public class Aircraft extends Flyable {
      * @param p_name        Name
      * @param p_coordinates Coordinates
      */
-    protected Aircraft(long p_id, String p_name, Coordinates p_coordinates) {
-        System.out.println("Constructor Aircraft");
-    }
+    protected Aircraft(long p_id, String p_name, Coordinates p_coordinates) {}
 
     /**
      * updateConditions
