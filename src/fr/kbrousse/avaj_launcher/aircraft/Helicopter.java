@@ -9,7 +9,6 @@ public class Helicopter extends Aircraft {
      */
     protected Helicopter(long p_id, String p_name, Coordinates p_coordinates) {
         super(p_id, p_name, p_coordinates);
-        System.out.println("Constructor Helicopter");
     }
 
     /**

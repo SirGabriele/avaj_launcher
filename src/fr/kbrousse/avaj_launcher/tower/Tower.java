@@ -17,6 +17,14 @@ public class Tower {
     }
 
     /**
+     * Getter of observers
+     * @return List<Flyable>
+     */
+    public final List<Flyable> getObservers() {
+        return (this._observers);
+    }
+
+    /**
      * Register
      * @param p_flyable Flyable object to register
      */
