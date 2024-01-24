@@ -1,18 +1,14 @@
 package fr.kbrousse.avaj_launcher.my_exception;
 
-public class FileException extends Exception {
-    /**
-     * Red output color
-     */
-    public static final String RED = "\u001B[31m";
+import fr.kbrousse.avaj_launcher.output_colors.OutputColors;
 
-    /**
-     * Reset output color
-     */
-    public static final String RESET = "\u001B[0m";
-
+/**
+ * FileException class
+ */
+public class FileException extends Exception implements OutputColors {
     /**
      * Default constructor
+     * @param message String message
      */
     public FileException(String message) {
         super(RED + "Error: " + RESET + message);

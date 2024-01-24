@@ -1,34 +1,35 @@
 package fr.kbrousse.avaj_launcher.main;
 
-import fr.kbrousse.avaj_launcher.aircraft.Simulator;
-
+/**
+ * SimulationParameters class
+ */
 public class SimulationParameters {
     /**
-     * Array of String containing all aircrafts to be made
+     * Array of String containing all aircraft to be made
      */
-    private String[]    allAircrafts;
+    private final String[] allAircraft;
 
     /**
-     * Number of times the simualtion should be run
+     * Number of times the simulation should be run
      */
-    private int         nbOfSimulation;
+    private final int nbOfSimulation;
 
     /**
-     * Constructor
+     * Default Constructor
      * @param p_nbOfSimulation Number of simulations to run
-     * @param p_allAircrafts String array containing all aircrafts
+     * @param p_allAircraft String array containing all aircrafts
      */
-    public SimulationParameters(int p_nbOfSimulation, String[] p_allAircrafts) {
+    public SimulationParameters(int p_nbOfSimulation, String[] p_allAircraft) {
         this.nbOfSimulation = p_nbOfSimulation;
-        this.allAircrafts = p_allAircrafts;
+        this.allAircraft = p_allAircraft;
     }
 
     /**
-     * Getter of allAircrafts
-     * @return String[] allAircrafts
+     * Getter of allAircraft
+     * @return String[] allAircraft
      */
-    public final String[] getAllAircrafts() {
-        return (this.allAircrafts);
+    public final String[] getAllAircraft() {
+        return (this.allAircraft);
     }
 
     /**

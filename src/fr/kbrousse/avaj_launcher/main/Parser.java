@@ -4,16 +4,20 @@ import fr.kbrousse.avaj_launcher.my_exception.FileException;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.Arrays;
 
+/**
+ * Parser class
+ */
 public class Parser {
     /**
-     * Default constructor
+     * Private default constructor
      */
     private Parser() {}
 
     /**
-     * parseFirstLine
-     * @param file file
+     * Parse the file
+     * @param file input file
      * @return int number of simulations
      */
     public static SimulationParameters parseFile(File file) {
@@ -33,6 +37,9 @@ public class Parser {
             // Extract the number on the first line
             nbOfSimulation = Parser.parseFirstLine(allLines[0]);
 
+            // Modify allLines so that it only contains the aircraft information
+            allLines = Arrays.copyOfRange(allLines, 1, allLines.length);
+
             Parser.parseBody(allLines);
             return (new SimulationParameters(nbOfSimulation, allLines));
         } catch (Exception e) {
@@ -45,6 +52,7 @@ public class Parser {
      * Parse the first line of the file
      * @param s string to parse
      * @throws FileException When the number of simulation is invalid
+     * @return int number of simulations
      */
     public static int parseFirstLine(String s) throws FileException{
         // Trim the String to get rid of all useless whitespaces
@@ -57,14 +65,14 @@ public class Parser {
 
     /**
      * Parse the body of the file
-     * @param s array containing all aircrafts data
+     * @param s array containing all aircraft data
      * @throws FileException When body has an invalid format
      */
     public static void parseBody(String[] s) throws FileException {
-        // Index starts at 1 because s contains the first line of the file, which we don't parse here
-        for (int i = 1; i < s.length; ++i) {
-            if (!s[i].matches("[A-Za-z]+\\s[A-Za-z0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+")) {
-                throw new FileException("Invalid body on line " + i + ": " + s[i]);
+        for (int i = 0; i < s.length; ++i) {
+            if (!s[i].trim().matches("[A-Za-z]+\\s[A-Za-z0-9]+\\s[0-9]+\\s[0-9]+\\s([0-9]|[1-9][0-9]|100)")) {
+                throw new FileException("Invalid body - Line " + i + ": " + s[i] + '\n' +
+                        "Format is: <type> <name> <latitude> <longitude> <height from 0 to 100>");
             }
         }
     }

@@ -1,5 +1,8 @@
 package fr.kbrousse.avaj_launcher.console_log;
 
+/**
+ * ConsoleLog class
+ */
 public class ConsoleLog {
     /**
      * Red output color
@@ -12,7 +15,7 @@ public class ConsoleLog {
     public static final String RESET = "\u001B[0m";
 
     /**
-     * Default constructor
+     * Private default constructor
      */
     private ConsoleLog() {}
 }

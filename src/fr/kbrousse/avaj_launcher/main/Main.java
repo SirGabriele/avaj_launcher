@@ -1,12 +1,24 @@
 package fr.kbrousse.avaj_launcher.main;
 
 import fr.kbrousse.avaj_launcher.aircraft.Simulator;
-import fr.kbrousse.avaj_launcher.console_log.ConsoleLog;
+import fr.kbrousse.avaj_launcher.output_colors.OutputColors;
 
-import java.io.Console;
 import java.io.File;
 
-public class Main {
+/**
+ * Main class
+ */
+public class Main implements OutputColors {
+
+    /**
+     * Private default constructor
+     */
+    private Main() {}
+
+    /**
+     * Program entry point
+     * @param args The input file
+     */
     public static void main(String[] args) {
         // Only one argument should be given: the input file name
         if (args.length != 1) {
@@ -18,7 +30,7 @@ public class Main {
         File file = new File(args[0]);
         // Verify its existence
         if (!file.exists()) {
-            System.out.println("File '" + args[0] + "' can not be found");
+            System.out.println(RED + "Error: " + RESET + "File '" + args[0] + "' can not be found");
             System.exit(1);
         }
 
