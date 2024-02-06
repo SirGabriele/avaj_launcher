@@ -1,14 +1,13 @@
-package fr.kbrousse.avaj_launcher.weatherTower;
+package fr.kbrousse.avaj_launcher.tower;
 
 import fr.kbrousse.avaj_launcher.aircraft.Coordinates;
-import fr.kbrousse.avaj_launcher.tower.Tower;
 import fr.kbrousse.avaj_launcher.weather_provider.WeatherProvider;
 
 /**
  * WeatherTower class
  */
 public class WeatherTower extends Tower {
-        /**
+    /**
      * Default constructor
      */
     public WeatherTower() {

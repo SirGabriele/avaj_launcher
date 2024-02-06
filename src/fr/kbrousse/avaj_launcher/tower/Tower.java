@@ -14,7 +14,7 @@ public class Tower {
     /**
      * List of Flyable registered to this Tower
      */
-    private List<Flyable> observers;
+    private final List<Flyable> observers;
 
     /**
      * Constructor

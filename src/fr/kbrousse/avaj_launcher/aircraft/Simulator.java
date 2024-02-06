@@ -3,9 +3,7 @@ package fr.kbrousse.avaj_launcher.aircraft;
 import fr.kbrousse.avaj_launcher.flyable.Flyable;
 import fr.kbrousse.avaj_launcher.main.SimulationParameters;
 import fr.kbrousse.avaj_launcher.my_exception.FileException;
-import fr.kbrousse.avaj_launcher.weatherTower.WeatherTower;
-
-import java.io.IOException;
+import fr.kbrousse.avaj_launcher.tower.WeatherTower;
 
 /**
  * Simulator class

@@ -1,6 +1,6 @@
 package fr.kbrousse.avaj_launcher.flyable;
 
-import fr.kbrousse.avaj_launcher.weatherTower.WeatherTower;
+import fr.kbrousse.avaj_launcher.tower.WeatherTower;
 
 /**
  * Flyable class

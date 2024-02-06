@@ -1,21 +1,7 @@
-Tower says: JetPlane#k(1) registered to weather tower.
-JetPlane#k(1): I can't see ship (it's a JetPlane joke when there is fog)
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's raining but in a JetPlane it does not really matter
-JetPlane#k(1): I can't see ship (it's a JetPlane joke when there is fog)
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's raining but in a JetPlane it does not really matter
-JetPlane#k(1): I can't see ship (it's a JetPlane joke when there is fog)
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's raining but in a JetPlane it does not really matter
-JetPlane#k(1): I can't see ship (it's a JetPlane joke when there is fog)
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's raining but in a JetPlane it does not really matter
-JetPlane#k(1): I can't see ship (it's a JetPlane joke when there is fog)
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's hot in this metal JetPlane
-JetPlane#k(1): It's hot in this metal JetPlane
+Tower says: Helicopter#B31(1) registered to weather tower.
+Tower says: Baloon#B1(2) registered to weather tower.
+Helicopter#B31(1): I'm a heli-cold-pter
+Baloon#B1(2): My baloon is wet
+Baloon#B1(2) landing.
+Tower says: Baloon#B1(2) unregistered from weather tower.
+Helicopter#B31(1): I'm a heli-cold-pter

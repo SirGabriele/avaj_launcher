@@ -61,17 +61,6 @@ public class Coordinates {
     }
 
     /**
-     * Decrease longitude
-     * @param p_value int value
-     */
-    public void decreaseLongitude(int p_value) {
-        this.longitude -= p_value;
-        if (this.longitude < 0) {
-            this.longitude = 0;
-        }
-    }
-
-    /**
      * Increase latitude
      * @param p_value int value
      */
@@ -79,17 +68,6 @@ public class Coordinates {
         this.latitude += p_value;
         if (this.latitude > 100) {
             this.latitude = 100;
-        }
-    }
-
-    /**
-     * Decrease latitude
-     * @param p_value int value
-     */
-    public void decreaseLatitude(int p_value) {
-        this.latitude -= p_value;
-        if (this.latitude < 0) {
-            this.latitude = 0;
         }
     }
 

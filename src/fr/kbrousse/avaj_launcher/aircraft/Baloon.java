@@ -11,10 +11,10 @@ public class Baloon extends Aircraft {
      * Constructor
      * @param p_id          Id
      * @param p_name        Name
-     * @param p_coordinates Coordinates
+     * @param p_coordinate Coordinates
      */
-    public Baloon(long p_id, String p_name, Coordinates p_coordinates) {
-        super(p_id, p_name, p_coordinates);
+    public Baloon(long p_id, String p_name, Coordinates p_coordinate) {
+        super(p_id, p_name, p_coordinate);
         this.type = "Baloon";
     }
 
