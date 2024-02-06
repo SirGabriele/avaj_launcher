@@ -1,7 +1,9 @@
 package fr.kbrousse.avaj_launcher.main;
 
 import fr.kbrousse.avaj_launcher.aircraft.Simulator;
+import fr.kbrousse.avaj_launcher.parser.Parser;
 import fr.kbrousse.avaj_launcher.output_colors.OutputColors;
+import fr.kbrousse.avaj_launcher.writer.Writer;
 
 import java.io.File;
 
@@ -41,8 +43,10 @@ public class Main implements OutputColors {
         }
 
         try {
+            Writer.getInstance().createFile();
             // Launch the simulation
             Simulator.launch(params);
+            Writer.getInstance().closeWriter();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

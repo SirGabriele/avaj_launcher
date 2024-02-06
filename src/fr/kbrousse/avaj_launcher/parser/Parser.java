@@ -1,5 +1,6 @@
-package fr.kbrousse.avaj_launcher.main;
+package fr.kbrousse.avaj_launcher.parser;
 
+import fr.kbrousse.avaj_launcher.main.SimulationParameters;
 import fr.kbrousse.avaj_launcher.my_exception.FileException;
 
 import java.io.File;

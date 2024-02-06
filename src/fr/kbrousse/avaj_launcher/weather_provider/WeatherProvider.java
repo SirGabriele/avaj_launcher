@@ -9,12 +9,12 @@ public class WeatherProvider {
     /**
      * Static instance of WeatherProvider
      */
-    public static WeatherProvider instance = null;
+    private static WeatherProvider instance = null;
 
     /**
      * Array of String containing the different possible weathers
      */
-    final String[] weather = {"RAIN", "FOG", "SUN", "SNOW"};
+    private final String[] weather = {"RAIN", "FOG", "SUN", "SNOW"};
 
     /**
      * Private default constructor
@@ -27,7 +27,7 @@ public class WeatherProvider {
      */
     public static synchronized WeatherProvider getInstance() {
         if (WeatherProvider.instance == null) {
-            WeatherProvider.instance = new WeatherProvider();
+            WeatherProvider.instance     = new WeatherProvider();
         }
         return (WeatherProvider.instance);
     }

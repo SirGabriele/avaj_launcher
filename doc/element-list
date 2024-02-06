@@ -1,9 +1,10 @@
 fr.kbrousse.avaj_launcher.aircraft
-fr.kbrousse.avaj_launcher.console_log
 fr.kbrousse.avaj_launcher.flyable
 fr.kbrousse.avaj_launcher.main
 fr.kbrousse.avaj_launcher.my_exception
 fr.kbrousse.avaj_launcher.output_colors
+fr.kbrousse.avaj_launcher.parser
 fr.kbrousse.avaj_launcher.tower
 fr.kbrousse.avaj_launcher.weather_provider
 fr.kbrousse.avaj_launcher.weatherTower
+fr.kbrousse.avaj_launcher.writer

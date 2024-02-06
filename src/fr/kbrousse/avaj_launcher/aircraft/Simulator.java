@@ -5,6 +5,8 @@ import fr.kbrousse.avaj_launcher.main.SimulationParameters;
 import fr.kbrousse.avaj_launcher.my_exception.FileException;
 import fr.kbrousse.avaj_launcher.weatherTower.WeatherTower;
 
+import java.io.IOException;
+
 /**
  * Simulator class
  */
@@ -37,7 +39,7 @@ public class Simulator {
      * @return WeatherTower instance
      * @throws FileException If the file contains an invalid information
      */
-    private static WeatherTower _createAircraft(final String[] allAircraft) throws FileException {
+    private static WeatherTower _createAircraft(final String[] allAircraft) throws Exception {
         final WeatherTower weatherTower = new WeatherTower();
         for (String s : allAircraft) {
             final String[] info = s.split("\\s");

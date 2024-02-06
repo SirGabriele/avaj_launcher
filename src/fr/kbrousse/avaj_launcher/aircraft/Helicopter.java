@@ -1,6 +1,7 @@
 package fr.kbrousse.avaj_launcher.aircraft;
 
 import fr.kbrousse.avaj_launcher.my_exception.InternalException;
+import fr.kbrousse.avaj_launcher.writer.Writer;
 
 /**
  * Helicopter class
@@ -22,29 +23,29 @@ public class Helicopter extends Aircraft {
      * @throws InternalException If the weather found is invalid
      */
     @Override
-    public void updateConditions() throws InternalException{
+    public void updateConditions() throws Exception {
         String weather = this.weatherTower.getWeather(this.coordinates);
         switch (weather) {
             case "RAIN":
                 this.coordinates.increaseLongitude(5);
-                System.out.println(this.getPrefix() + ": The Helicopter blades will cut the rain");
+                Writer.getInstance().writeToFile(this.getPrefix() + ": The Helicopter blades will cut the rain");
                 break ;
             case "FOG":
                 this.coordinates.increaseLongitude(1);
-                System.out.println(this.getPrefix() + ": Fog so thick you could cut it with a blade");
+                Writer.getInstance().writeToFile(this.getPrefix() + ": Fog so thick you could cut it with a blade");
                 break ;
             case "SUN":
                 this.coordinates.increaseLongitude(10);
                 this.coordinates.increaseHeight(2);
-                System.out.println(this.getPrefix() + ": I'm not a Helios-copter");
+                Writer.getInstance().writeToFile(this.getPrefix() + ": I'm not a Helios-copter");
                 break ;
             case "SNOW":
                 this.coordinates.decreaseHeight(12);
-                System.out.println(this.getPrefix() + ": I'm a heli-cold-pter");
+                Writer.getInstance().writeToFile(this.getPrefix() + ": I'm a heli-cold-pter");
                 break ;
         }
         if (this.coordinates.getHeight() == 0) {
-            System.out.println(this.getPrefix() + " landing.");
+            Writer.getInstance().writeToFile(this.getPrefix() + " landing.");
             this.weatherTower.unregister(this);
         }
     }

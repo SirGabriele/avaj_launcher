@@ -1,7 +1,9 @@
 package fr.kbrousse.avaj_launcher.tower;
 
 import fr.kbrousse.avaj_launcher.flyable.Flyable;
+import fr.kbrousse.avaj_launcher.writer.Writer;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,19 +34,21 @@ public class Tower {
     /**
      * Register a flyable object
      * @param p_flyable Flyable object to register
+     * @throws IOException If write failed
      */
-    public void register(Flyable p_flyable) {
+    public void register(Flyable p_flyable) throws IOException {
         this.observers.add(p_flyable);
-        System.out.println("Tower says: " + p_flyable.getPrefix() + " registered to weather tower.");
+        Writer.getInstance().writeToFile("Tower says: " + p_flyable.getPrefix() + " registered to weather tower.");
     }
 
     /**
      * Unregister a flyable object
      * @param p_flyable Flyable object to unregister
+     * @throws IOException If write failed
      */
-    public void unregister(Flyable p_flyable) {
+    public void unregister(Flyable p_flyable) throws IOException {
         this.observers.remove(p_flyable);
-        System.out.println("Tower says: " + p_flyable.getPrefix() + " unregistered from weather tower.");
+        Writer.getInstance().writeToFile("Tower says: " + p_flyable.getPrefix() + " unregistered from weather tower.");
     }
 
     /**
