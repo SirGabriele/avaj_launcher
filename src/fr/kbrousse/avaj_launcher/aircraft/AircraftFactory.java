@@ -3,8 +3,6 @@ package fr.kbrousse.avaj_launcher.aircraft;
 import fr.kbrousse.avaj_launcher.flyable.Flyable;
 import fr.kbrousse.avaj_launcher.my_exception.FileException;
 
-import java.io.File;
-
 /**
  * AircraftFactory class
  */

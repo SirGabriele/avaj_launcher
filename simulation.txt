@@ -1,7 +1,0 @@
-Tower says: Helicopter#B31(1) registered to weather tower.
-Tower says: Baloon#B1(2) registered to weather tower.
-Helicopter#B31(1): I'm a heli-cold-pter
-Baloon#B1(2): My baloon is wet
-Baloon#B1(2) landing.
-Tower says: Baloon#B1(2) unregistered from weather tower.
-Helicopter#B31(1): I'm a heli-cold-pter

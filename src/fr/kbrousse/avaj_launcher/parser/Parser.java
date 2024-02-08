@@ -26,19 +26,26 @@ public class Parser {
         int         nbOfSimulation;
 
         try (FileInputStream inStream = new FileInputStream(file)) {
-            // Write the whole file content into a buffer
-            byte[] buffer = new byte[(int) file.length()];
+            // Create a buffer of size file.length()
+            byte[] buffer = new byte[(int)file.length()];
+
+            // Read file content into a buffer
             if (inStream.read(buffer) == -1) {
                 throw new FileException("Could not read file");
             }
 
-            // Convert the buffer into a String and then split on every newline
-            allLines = new String(buffer).split("\n");
+            // If file is empty
+            if (buffer.length == 0) {
+                throw new FileException("File is empty");
+            }
+
+            // Convert the buffer into a String, trim it and then split on every newline
+            allLines = new String(buffer).trim().split("\n");
 
             // Extract the number on the first line
             nbOfSimulation = Parser.parseFirstLine(allLines[0]);
 
-            // Modify allLines so that it only contains the aircraft information
+            // Get rid of the first line so that allLines only contains the aircraft information
             allLines = Arrays.copyOfRange(allLines, 1, allLines.length);
 
             Parser.parseBody(allLines);
@@ -59,7 +66,7 @@ public class Parser {
         // Trim the String to get rid of all useless whitespaces
         s = s.trim();
         if (!s.matches("\\d+")) {
-            throw new FileException("Invalid number of simulation to run: " + s);
+            throw new FileException("Invalid value - Line 1: " + s + '\n' + "Require int");
         }
         return (Integer.parseInt(s));
     }
@@ -70,6 +77,9 @@ public class Parser {
      * @throws FileException When body has an invalid format
      */
     public static void parseBody(String[] s) throws FileException {
+        if (s.length == 0) {
+            throw new FileException("Invalid body - Empty");
+        }
         for (int i = 0; i < s.length; ++i) {
             if (!s[i].trim().matches("[A-Za-z]+\\s[A-Za-z0-9]+\\s[0-9]+\\s[0-9]+\\s([0-9]|[1-9][0-9]|100)")) {
                 throw new FileException("Invalid body - Line " + i + ": " + s[i] + '\n' +

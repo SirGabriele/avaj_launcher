@@ -34,6 +34,8 @@ public class Writer {
      */
     private Writer() throws IOException {
         if (writer == null) {
+            // Initialize the writer
+            // Create the file or erase the content of the existing one
             writer = new BufferedWriter(new FileWriter(outputFile));
         }
     }
@@ -41,24 +43,13 @@ public class Writer {
     /**
      * Getter of instance
      * @return Writer instance
-     * @throws IOException If creation failed
+     * @throws IOException If the creation failed
      */
     public static synchronized Writer getInstance() throws IOException {
         if (Writer.instance == null) {
             Writer.instance = new Writer();
         }
         return (Writer.instance);
-    }
-
-    /**
-     * Create the output file
-     * @throws IOException If the creation failed
-     */
-    public void createFile() throws IOException {
-        if (outputFile.exists()) {
-            // Clear the content of the file
-            writer.write("");
-        }
     }
 
     /**
@@ -71,7 +62,7 @@ public class Writer {
     }
 
     /**
-     * Close the Writer
+     * Close the Writer. By doing so, print the buffer content into the file
      * @throws IOException Il the close failed
      */
     public void closeWriter() throws IOException {
