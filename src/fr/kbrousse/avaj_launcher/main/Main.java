@@ -48,7 +48,7 @@ public class Main implements OutputColors {
             // By closing it, print the buffer content into the file
             Writer.getInstance().closeWriter();
         } catch (Exception e) {
-            System.out.println(RED + "Error: " + RESET + e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 }
